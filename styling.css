@@ -144,8 +144,8 @@ section {
 
 .btn {
   display: inline-block;
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: #e64626;
+  color: var(--color-light);
   padding: 14px 32px;
   font-weight: 700;
   text-transform: uppercase;
@@ -234,6 +234,38 @@ section {
 .about-item p {
   font-size: 0.92rem;
   color: var(--color-dark);
+}
+
+/* ===================== PRIVACY POLICY ===================== */
+.privacy-page {
+  min-height: 70vh;
+  padding: clamp(36px, 6vw, 60px) clamp(20px, 8vw, 8%);
+  background: var(--color-light);
+}
+
+.privacy-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-content h1 {
+  margin-bottom: 28px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.privacy-content h2 {
+  margin: 28px 0 10px;
+  font-size: 1.3rem;
+}
+
+.privacy-content p {
+  margin-bottom: 14px;
+}
+
+.privacy-content a {
+  color: #e64626;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
 }
 
 /* ===================== IMPACT / PROJECT GRID ===================== */
@@ -337,10 +369,16 @@ section {
 }
 
 .social-links a {
+  color: #e64626;
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   font-weight: 600;
+}
+
+.contact-block > p:first-child,
+.notices-block > p:first-child {
+  color: #e64626;
 }
 
 .contact-block p,
