@@ -449,6 +449,12 @@ section {
   padding: 16px;
   border-radius: 4px;
   text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+a.project-tile:hover {
+  background: rgba(241, 241, 241, 0.2);
+  transform: translateY(-3px);
 }
 
 .project-tile img {
@@ -464,6 +470,62 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-light);
+}
+
+/* ===================== PROJECT DETAILS ===================== */
+.project-detail {
+  min-height: 60vh;
+  padding: clamp(56px, 10vw, 112px) clamp(20px, 8vw, 8%);
+  background: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+.project-detail-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.project-detail h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+.project-overview {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.project-overview h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-overview-box {
+  min-height: 220px;
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  text-align: left;
+}
+
+.project-overview-box p + p {
+  margin-top: 16px;
+}
+
+.project-years {
+  margin-bottom: 28px;
+  color: #e64626;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.project-detail .btn {
+  margin-top: 32px;
 }
 
 /* ===================== SPONSORS ===================== */
