@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Team - University Rocketry Team</title>
+  <link rel="stylesheet" href="styling.css">
+  <script src="team.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="base.html" class="logo">
+      <img src="images/usydrocketry_logo-removebg-preview.png" alt="University of Sydney Rocketry Team logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="base.html#home">Home</a></li>
+        <li><a href="team.html" aria-current="page">Team</a></li>
+        <li><a href="base.html#partners">Partners</a></li>
+        <li class="has-dropdown">
+          <a href="base.html#projects">Projects</a>
+          <ul class="dropdown">
+            <li><a href="base.html#projects">Project One</a></li>
+            <li><a href="base.html#projects">Project Two</a></li>
+            <li><a href="base.html#projects">Project Three</a></li>
+            <li><a href="base.html#projects">Project Four</a></li>
+            <li><a href="base.html#projects">Project Five</a></li>
+          </ul>
+        </li>
+        <li><a href="base.html#media">Media</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="team-intro">
+    <h1>Meet the Team</h1>
+    <p>Meet the people who design, build and launch our rockets. Explore each team's profiles below.</p>
+  </section>
+
+  <section class="team-carousel" aria-labelledby="team-heading">
+    <h2 id="team-heading">The people behind every launch</h2>
+    <div class="team-picker" role="tablist" aria-label="Rocketry teams">
+      <button type="button" id="team-tab-flight-systems" role="tab" aria-controls="team-panel-flight-systems" aria-selected="true" tabindex="0">Flight Systems</button>
+      <button type="button" id="team-tab-propulsion" role="tab" aria-controls="team-panel-propulsion" aria-selected="false" tabindex="-1">Propulsion</button>
+      <button type="button" id="team-tab-ground-support-equipment" role="tab" aria-controls="team-panel-ground-support-equipment" aria-selected="false" tabindex="-1">Ground Support Equipment</button>
+      <button type="button" id="team-tab-modelling-and-control" role="tab" aria-controls="team-panel-modelling-and-control" aria-selected="false" tabindex="-1">Modelling and Control</button>
+      <button type="button" id="team-tab-payload" role="tab" aria-controls="team-panel-payload" aria-selected="false" tabindex="-1">Payload</button>
+    </div>
+
+    <div class="team-slides" aria-live="polite">
+      <div class="team-slide" id="team-panel-flight-systems" role="tabpanel" aria-labelledby="team-tab-flight-systems">
+        <h3>Flight Systems</h3>
+        <p>Electronics and onboard systems that support each flight.</p>
+        <div class="member-grid">
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Flight Systems role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Flight Systems role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Flight Systems role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-slide" id="team-panel-propulsion" role="tabpanel" aria-labelledby="team-tab-propulsion" hidden>
+        <h3>Propulsion</h3>
+        <p>Engineers who develop and test the systems that power our rockets.</p>
+        <div class="member-grid">
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Propulsion role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Propulsion role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Propulsion role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-slide" id="team-panel-ground-support-equipment" role="tabpanel" aria-labelledby="team-tab-ground-support-equipment" hidden>
+        <h3>Ground Support Equipment</h3>
+        <p>Meet the team creating the equipment and systems used to prepare and support launches.</p>
+        <div class="member-grid">
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Ground Support Equipment role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Ground Support Equipment role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Ground Support Equipment role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-slide" id="team-panel-modelling-and-control" role="tabpanel" aria-labelledby="team-tab-modelling-and-control" hidden>
+        <h3>Modelling and Control</h3>
+        <p>The team modelling rocket behaviour and developing systems to control flight.</p>
+        <div class="member-grid">
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Modelling and Control role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Modelling and Control role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Modelling and Control role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-slide" id="team-panel-payload" role="tabpanel" aria-labelledby="team-tab-payload" hidden>
+        <h3>Payload</h3>
+        <p>Meet the team designing and building the payloads carried on our rockets.</p>
+        <div class="member-grid">
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Payload role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Payload role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+          <article class="member-card">
+            <div class="member-avatar" aria-hidden="true">URT</div>
+            <div class="member-info">
+              <h4>Member name</h4>
+              <p class="member-role">Payload role</p>
+              <p class="member-bio">Add a short introduction about this team member.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls" aria-label="Carousel controls">
+      <button class="carousel-control" type="button" data-direction="-1" aria-label="Previous team">&larr;</button>
+      <span class="carousel-status" aria-live="polite">1 / 5</span>
+      <button class="carousel-control" type="button" data-direction="1" aria-label="Next team">&rarr;</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="social-links">
+      <a href="https://www.instagram.com/usydrocketry/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.youtube.com/@usydrocketryteam" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.linkedin.com/company/usydrocketry/posts/?feedView=all&amp;viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="contact-block">
+      <p><strong>CONTACT US:</strong></p>
+      <p><strong>General:</strong> <a href="mailto:rocketry.team@sydney.edu.au">rocketry.team@sydney.edu.au</a></p>
+      <p>School of Aerospace, Mechanical and Mechatronic Engineering, New South Wales 2006, Australia</p>
+    </div>
+    <div class="notices-block">
+      <p><strong>NOTICES:</strong></p>
+      <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <img src="images/usydrocketry_logo-removebg-preview.png" alt="University of Sydney Rocketry Team logo">
+    <p>&copy; 2026 University Rocketry Team.</p>
+  </div>
+</footer>
+
+</body>
+</html>

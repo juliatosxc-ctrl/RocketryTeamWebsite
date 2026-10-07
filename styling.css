@@ -268,6 +268,160 @@ section {
   overflow-wrap: anywhere;
 }
 
+/* ===================== TEAM ===================== */
+.team-intro {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: clamp(56px, 10vw, 112px) clamp(20px, 8vw, 8%);
+  text-align: center;
+}
+
+.team-intro h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.team-intro p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(241, 241, 241, 0.8);
+  font-size: 1.05rem;
+}
+
+.team-carousel {
+  background: var(--color-light);
+  min-height: 60vh;
+  text-align: center;
+}
+
+.team-carousel h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin-bottom: 28px;
+}
+
+.team-picker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 36px;
+}
+
+.team-picker button,
+.carousel-control {
+  border: 1px solid var(--color-dark);
+  background: transparent;
+  color: var(--color-dark);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.team-picker button {
+  border-radius: 2px;
+  padding: 10px 16px;
+}
+
+.team-picker button[aria-selected="true"],
+.team-picker button:hover,
+.carousel-control:hover {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.team-picker button:focus-visible,
+.carousel-control:focus-visible {
+  outline: 3px solid #e64626;
+  outline-offset: 3px;
+}
+
+.team-slide[hidden] {
+  display: none;
+}
+
+.team-slide h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.team-slide > p {
+  margin-bottom: 28px;
+  color: #666;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(16px, 2.5vw, 24px);
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.member-card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.member-avatar {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  background: var(--color-dark);
+  color: var(--color-light);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h4 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.member-role {
+  margin-bottom: 10px;
+  color: #e64626;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.member-bio {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.carousel-control {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.carousel-status {
+  min-width: 56px;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ===================== IMPACT / PROJECT GRID ===================== */
 .impact {
   background: var(--color-dark);
@@ -360,11 +514,13 @@ section {
   gap: clamp(20px, 3vw, 30px);
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(241, 241, 241, 0.3);
+  text-align: center;
 }
 
 .social-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -396,11 +552,14 @@ section {
 .footer-bottom {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   padding-top: 24px;
   font-size: 0.8rem;
   color: var(--color-light);
   opacity: 0.7;
+  text-align: center;
 }
 
 .footer-bottom img {
