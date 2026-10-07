@@ -1,4 +1,2 @@
 # RocketryTeamWebsite
-# asdfkjsdlfkd
-# git tetst
-# sfjlsadfksdkdkdkdkddk test 
+# use for tests
