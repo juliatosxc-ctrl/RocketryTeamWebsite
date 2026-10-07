@@ -27,15 +27,17 @@ h1, h2, h3, h4, h5 {
 }
 
 section {
-  padding: 60px 8%;
+  padding: clamp(36px, 6vw, 60px) clamp(20px, 8vw, 8%);
 }
 
 /* ===================== HEADER / NAV ===================== */
 .site-header {
   position: sticky;
   top: 0;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
+  width: 100%;
+  min-height: clamp(64px, 9vh, 96px);
+  background: #000000;
+  border-bottom: 1px solid #222;
   z-index: 100;
 }
 
@@ -43,17 +45,20 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 8%;
+  min-height: inherit;
+  padding: 0 8%;
+  gap: 16px;
 }
 
 .logo img {
-  height: 44px;
+  height: clamp(36px, 5vw, 44px);
 }
 
 .main-nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  gap: 32px;
+  gap: clamp(12px, 2.2vw, 32px);
 }
 
 .main-nav > ul > li {
@@ -61,10 +66,15 @@ section {
 }
 
 .main-nav a {
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.main-nav a:hover {
+  color: #d9d9d9;
 }
 
 .has-dropdown:hover .dropdown {
@@ -104,11 +114,13 @@ section {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 100px 8%;
+  gap: clamp(24px, 5vw, 40px);
+  min-height: min(72vh, 720px);
+  padding: clamp(48px, 10vw, 100px) clamp(20px, 8vw, 8%);
 }
 
 .hero-content {
+  flex: 1 1 320px;
   max-width: 560px;
 }
 
@@ -119,7 +131,7 @@ section {
 }
 
 .hero-logo {
-  width: 260px;
+  width: clamp(160px, 30vw, 260px);
   opacity: 0.9;
 }
 
@@ -149,15 +161,15 @@ section {
 /* ===================== INTRO CARDS ===================== */
 .intro-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 60px 8%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  padding: clamp(36px, 6vw, 60px) clamp(20px, 8vw, 8%);
   background: #f7f7f7;
 }
 
 .card {
   background: #fff;
-  padding: 36px;
+  padding: clamp(24px, 4vw, 36px);
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
@@ -199,8 +211,8 @@ section {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(20px, 3vw, 30px);
   text-align: left;
 }
 
@@ -235,8 +247,8 @@ section {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(16px, 2.5vw, 24px);
 }
 
 .project-tile {
@@ -247,6 +259,9 @@ section {
 }
 
 .project-tile img {
+  width: min(100%, 300px);
+  aspect-ratio: 1;
+  object-fit: cover;
   margin: 0 auto 12px;
   border-radius: 4px;
 }
@@ -277,10 +292,12 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 36px;
+  gap: clamp(16px, 3vw, 36px);
 }
 
 .sponsor-strip img {
+  width: clamp(100px, 14vw, 140px);
+  height: auto;
   filter: grayscale(100%);
   opacity: 0.75;
   transition: opacity 0.2s ease, filter 0.2s ease;
@@ -295,13 +312,13 @@ section {
 .site-footer {
   background: #111;
   color: #ccc;
-  padding: 60px 8% 24px;
+  padding: clamp(36px, 6vw, 60px) clamp(20px, 8vw, 8%) 24px;
 }
 
 .footer-top {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(20px, 3vw, 30px);
   padding-bottom: 36px;
   border-bottom: 1px solid #333;
 }
@@ -347,13 +364,7 @@ section {
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
   .main-nav ul {
-    gap: 18px;
-  }
-  .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 18px;
   }
   .footer-top {
     grid-template-columns: 1fr;
@@ -361,16 +372,27 @@ section {
 }
 
 @media (max-width: 600px) {
-  .main-nav {
-    display: none; /* consider adding a hamburger menu for full mobile support */
+  .nav-wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5%;
   }
-  .intro-cards,
-  .about-grid,
-  .project-grid {
-    grid-template-columns: 1fr;
+  .main-nav ul {
+    justify-content: center;
+    gap: 6px 12px;
+  }
+  .main-nav a {
+    font-size: 0.7rem;
+  }
+  .dropdown {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .hero {
     flex-direction: column;
     text-align: center;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
   }
 }
