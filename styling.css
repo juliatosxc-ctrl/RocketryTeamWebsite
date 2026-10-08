@@ -458,11 +458,13 @@ a.project-tile:hover {
 }
 
 .project-tile img {
-  width: min(100%, 300px);
-  aspect-ratio: 1;
-  object-fit: cover;
+  display: block;
+  width: min(100%, 220px);
+  height: 220px;
+  object-fit: contain;
   margin: 0 auto 12px;
   border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .project-tile p {
@@ -492,6 +494,14 @@ a.project-tile:hover {
   line-height: 1.1;
 }
 
+.project-detail h1 img {
+  display: block;
+  width: min(100%, 420px);
+  height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
 .project-overview {
   margin-top: 40px;
   text-align: left;
@@ -511,6 +521,26 @@ a.project-tile:hover {
   background: var(--color-light);
   color: var(--color-dark);
   text-align: left;
+}
+
+.project-overview-with-image {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-overview-text {
+  flex: 1 1 0;
+}
+
+.project-side-image {
+  flex: 0 0 260px;
+  width: 260px;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .project-overview-box p + p {
