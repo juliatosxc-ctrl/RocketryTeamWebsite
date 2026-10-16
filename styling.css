@@ -552,8 +552,21 @@ a.project-tile:hover {
 }
 
 .project-detail-content {
-  max-width: 760px;
+  max-width: 1160px;
   margin: 0 auto;
+}
+
+.project-content-layout {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+  margin-top: 40px;
+  text-align: left;
+}
+
+.project-info-column {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .project-detail h1 {
@@ -591,6 +604,33 @@ a.project-tile:hover {
   text-align: left;
 }
 
+.media-page .project-detail-content {
+  max-width: 920px;
+}
+
+.media-intro {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.media-intro h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.media-intro-box {
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+.media-intro-box p + p {
+  margin-top: 16px;
+}
+
 .project-overview-with-image {
   display: flex;
   align-items: center;
@@ -611,8 +651,77 @@ a.project-tile:hover {
   background: rgba(0, 0, 0, 0.03);
 }
 
+.galah-rocket-image {
+  display: block;
+  flex: 0 0 320px;
+  width: 320px;
+  max-width: 100%;
+  max-height: 700px;
+  margin: 0;
+  object-fit: contain;
+}
+
 .project-overview-box p + p {
   margin-top: 16px;
+}
+
+.project-stats,
+.project-awards {
+  margin-top: 36px;
+  text-align: left;
+}
+
+.project-stats h2,
+.project-awards h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  padding: 20px 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #d4d4d4;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.metric-value {
+  display: block;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.award-list {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.award-list li {
+  padding: 16px 18px;
+  border-radius: 4px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 600;
 }
 
 .project-years {
@@ -730,6 +839,13 @@ a.project-tile:hover {
 @media (max-width: 900px) {
   .main-nav > ul {
     gap: 12px 18px;
+  }
+  .project-content-layout {
+    flex-direction: column;
+  }
+  .galah-rocket-image {
+    flex-basis: auto;
+    width: min(100%, 360px);
   }
   .footer-top {
     grid-template-columns: 1fr;
