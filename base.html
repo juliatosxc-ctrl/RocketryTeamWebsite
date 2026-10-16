@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="images/team%20logos/urt-favicon.png">
 <link rel="stylesheet" href="styling.css">
 </head>
-<body>
+<body class="home-page">
 
 <!-- ===================== HEADER / NAV ===================== -->
 <header class="site-header">
@@ -19,9 +19,9 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="#partners">Partners</a></li>
+        <li><a href="partners.html">Partners</a></li>
         <li class="has-dropdown">
-          <a href="#projects">Projects</a>
+          <a href="projects.html">Projects</a>
           <ul class="dropdown">
             <li><a href="galah.html">Galah</a></li>
             <li><a href="pardalote.html">Pardalote</a></li>
@@ -47,22 +47,10 @@
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Australia's Leading Student Rocketry Team</h1>
-    <a href="#projects" class="btn">Learn More</a>
-  </div>
-  <img class="hero-logo" src="images/team%20logos/URT-Grey-Logo-Graphic-scaled.webp" alt="University of Sydney Rocketry Team graphic">
-</section>
-
-<!-- ===================== INTRO CARDS ===================== -->
-<section class="intro-cards">
-  <div class="card">
-    <h4>Our Team</h4>
-    <p>Behind every project is a team of highly talented and dedicated student engineers.</p>
-    <a href="team.html">Learn More &rarr;</a>
-  </div>
-  <div class="card">
-    <h4>Media Releases</h4>
-    <p>View our dedicated media gallery showcasing our projects throughout the years.</p>
-    <a href="media.html">View &rarr;</a>
+    <a href="#team" class="btn hero-learn-more">
+      <span>Learn More</span>
+      <img src="images/team%20logos/URT-Grey-Logo-Graphic-scaled.webp" alt="">
+    </a>
   </div>
 </section>
 
@@ -91,48 +79,171 @@
   </div>
 </section>
 
-<!-- ===================== IMPACT / PROJECT GALLERY ===================== -->
-<section class="impact" id="projects">
-  <h2>See the Impact</h2>
-  <a href="#projects" class="btn btn-light">Learn More</a>
+<!-- ===================== IMPACT / PROJECT CAROUSEL ===================== -->
+<section class="impact projects-carousel-page" id="projects">
+  <div class="projects-carousel" aria-label="Project gallery carousel">
+    <button class="carousel-control prev" type="button" aria-label="Previous project">&#10094;</button>
+    <button class="carousel-control next" type="button" aria-label="Next project">&#10095;</button>
+    <div class="carousel-track">
+      <article class="project-slide is-active">
+        <video class="project-video" autoplay muted loop playsinline poster="images/rocket-images/pic-of-galah.png">
+          <source src="videos/irec2026-vid.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Hybrid SRAD</p>
+          <h2>Galah</h2>
+          <p>Our flagship hybrid SRAD launch vehicle, designed for ambitious flight performance and integrated systems testing.</p>
+          <a href="galah.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
 
-  <div class="project-grid">
-    <a class="project-tile" href="galah.html">
-      <img src="images/patches/galah-patch.png" alt="Galah project patch">
-      <p><em>GALAH</em></p>
-    </a>
-    <a class="project-tile" href="pardalote.html">
-      <img src="images/patches/Pardalote Patch.png" alt="Pardalote project logo">
-      <p><em>PARDALOTE</em></p>
-    </a>
-    <a class="project-tile" href="rosella.html">
-      <img src="images/patches/MP_RSOELLA.png" alt="Rosella project logo">
-      <p><em>ROSELLA</em></p>
-    </a>
-    <a class="project-tile" href="bluewren.html">
-      <img src="images/patches/bw_final_final-01-1.png" alt="Bluewren project logo">
-      <p><em>BLUEWREN</em></p>
-    </a>
-    <a class="project-tile" href="firetail.html">
-      <img src="images/patches/FT Media Final.png" alt="Firetail project logo">
-      <p><em>FIRETAIL</em></p>
-    </a>
-    <a class="project-tile" href="bronzewing.html">
-      <img src="images/patches/BW Media Final.png" alt="Bronzewing project logo">
-      <p><em>BRONZEWING</em></p>
-    </a>
-    <a class="project-tile" href="silvereye.html">
-      <img src="images/patches/silvereye-rmbg.png" alt="Silvereye project logo">
-      <p><em>SILVEREYE</em></p>
-    </a>
-    <a class="project-tile" href="wattle.html">
-      <img src="images/patches/Wattle MP.png" alt="Wattle project logo">
-      <p><em>WATTLE</em></p>
-    </a>
-    <a class="project-tile" href="callistlemoon.html">
-      <img src="images/patches/CS - MP.png" alt="Callistlemoon project logo">
-      <p><em>CALLISTLEMOON</em></p>
-    </a>
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/rocket-images/paradolte-rocket.webp">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launch-1562231048318/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">SRAD propulsion</p>
+          <h2>Pardalote</h2>
+          <p>Built on the lessons of earlier prototypes, Pardalote showcases continual propulsion innovation and validation.</p>
+          <a href="pardalote.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/rocket-images/pic-of-galah.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-flying-1562071170904/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Flight systems</p>
+          <h2>Rosella</h2>
+          <p>Focused on engineering reliability and flight system maturity in a student-designed rocketry platform.</p>
+          <a href="rosella.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/bw_final_final-01-1.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launch-1562142526342/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Vehicle development</p>
+          <h2>Bluewren</h2>
+          <p>Developing a refined, high-speed vehicle architecture grounded in repeated testing and improvement.</p>
+          <a href="bluewren.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/FT Media Final.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launching-1564668249937/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Launch operations</p>
+          <h2>Firetail</h2>
+          <p>Designed to strengthen our launch operations capability while pushing system-level performance boundaries.</p>
+          <a href="firetail.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/BW Media Final.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launch-1564568194258/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Prototype iteration</p>
+          <h2>Bronzewing</h2>
+          <p>A focused iteration in our vehicle development cycle, emphasizing performance refinement and test insight.</p>
+          <a href="bronzewing.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/silvereye-rmbg.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launch-1562308867424/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Experimental flight</p>
+          <h2>Silvereye</h2>
+          <p>Testing advanced concepts and engineering decisions in a next-generation flight-ready platform.</p>
+          <a href="silvereye.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/Wattle MP.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launch-1561362475780/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Design validation</p>
+          <h2>Wattle</h2>
+          <p>Investigating integrated design choices and launch readiness through rigorous in-house evaluation.</p>
+          <a href="wattle.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/team logos/usydrocketry_logo-removebg-preview.png">
+          <source src="https://cdn.coverr.co/videos/coverr-launching-rocket-1563438717842/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Program legacy</p>
+          <h2>Waratah</h2>
+          <p>A foundational platform in our heritage, carrying forward the lessons that shaped later vehicle designs.</p>
+          <a href="waratah.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/patches/CS - MP.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-take-off-1561001653548/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Systems integration</p>
+          <h2>Callistlemoon</h2>
+          <p>Integrating avionics, structures and launches systems into a cohesive and test-driven prototype platform.</p>
+          <a href="callistlemoon.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/rocket-images/pic-of-galah.png">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-launching-1564668249937/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Mission engineering</p>
+          <h2>Tetratheca</h2>
+          <p>Building the next generation of mission-ready rocketry through careful systems engineering and testing.</p>
+          <a href="tetratheca.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+
+      <article class="project-slide">
+        <video class="project-video" autoplay muted loop playsinline poster="images/rocket-images/paradolte-rocket.webp">
+          <source src="https://cdn.coverr.co/videos/coverr-rocket-flying-1562071170904/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay">
+          <p class="project-tag">Simulation &amp; design</p>
+          <h2>Ironbark</h2>
+          <p>Our modelling and simulation platform, enabling accurate flight predictions and development support across projects.</p>
+          <a href="ironbark.html" class="btn btn-light">View project</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="carousel-dots" aria-label="Project selector">
+      <button class="dot is-active" type="button" aria-label="Show Galah"></button>
+      <button class="dot" type="button" aria-label="Show Pardalote"></button>
+      <button class="dot" type="button" aria-label="Show Rosella"></button>
+      <button class="dot" type="button" aria-label="Show Bluewren"></button>
+      <button class="dot" type="button" aria-label="Show Firetail"></button>
+      <button class="dot" type="button" aria-label="Show Bronzewing"></button>
+      <button class="dot" type="button" aria-label="Show Silvereye"></button>
+      <button class="dot" type="button" aria-label="Show Wattle"></button>
+      <button class="dot" type="button" aria-label="Show Waratah"></button>
+      <button class="dot" type="button" aria-label="Show Callistlemoon"></button>
+      <button class="dot" type="button" aria-label="Show Tetratheca"></button>
+      <button class="dot" type="button" aria-label="Show Ironbark"></button>
+    </div>
   </div>
 </section>
 
@@ -147,6 +258,7 @@
     <img src="https://placehold.co/140x60/f2f2f2/999999?text=Sponsor" alt="Sponsor logo">
     <img src="https://placehold.co/140x60/f2f2f2/999999?text=Sponsor" alt="Sponsor logo">
   </div>
+  <a class="btn sponsor-partners-link" href="partners.html">Sponsorship opportunities</a>
 </section>
 
 <!-- ===================== FOOTER ===================== -->
@@ -178,5 +290,65 @@
   </div>
 </footer>
 
+<script>
+  const siteHeader = document.querySelector('.site-header');
+
+  function updateHeaderVisibility() {
+    siteHeader.classList.toggle('is-visible', window.scrollY > 40);
+  }
+
+  window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+  updateHeaderVisibility();
+</script>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(document.querySelectorAll('.project-slide'));
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const prevButton = document.querySelector('.carousel-control.prev');
+  const nextButton = document.querySelector('.carousel-control.next');
+
+  let currentIndex = 0;
+  let autoAdvance;
+
+  function showSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === currentIndex);
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === currentIndex);
+    });
+  }
+
+  function startAutoAdvance() {
+    clearInterval(autoAdvance);
+    autoAdvance = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 7000);
+  }
+
+  prevButton.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+    startAutoAdvance();
+  });
+
+  nextButton.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+    startAutoAdvance();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      startAutoAdvance();
+    });
+  });
+
+  showSlide(0);
+  startAutoAdvance();
+</script>
 </body>
 </html>
