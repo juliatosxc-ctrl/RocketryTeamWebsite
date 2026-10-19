@@ -17,6 +17,10 @@ body {
   line-height: 1.6;
 }
 
+.home-page.is-locked {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;

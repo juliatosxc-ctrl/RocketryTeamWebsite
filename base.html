@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="images/team%20logos/urt-favicon.png">
 <link rel="stylesheet" href="styling.css">
 </head>
-<body class="home-page">
+<body class="home-page is-locked">
 
 <!-- ===================== HEADER / NAV ===================== -->
 <header class="site-header">
@@ -292,10 +292,15 @@
 
 <script>
   const siteHeader = document.querySelector('.site-header');
+  const learnMoreLink = document.querySelector('.hero-learn-more');
 
   function updateHeaderVisibility() {
     siteHeader.classList.toggle('is-visible', window.scrollY > 40);
   }
+
+  learnMoreLink.addEventListener('click', () => {
+    document.body.classList.remove('is-locked');
+  });
 
   window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
   updateHeaderVisibility();
