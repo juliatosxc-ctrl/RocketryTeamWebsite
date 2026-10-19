@@ -73,7 +73,7 @@ section {
   align-items: center;
   justify-content: space-between;
   min-height: inherit;
-  padding: 0 8%;
+  padding: 0 clamp(16px, 2vw, 28px);
   gap: 16px;
 }
 
@@ -81,9 +81,18 @@ section {
   height: clamp(36px, 5vw, 44px);
 }
 
+.logo {
+  flex: 0 0 auto;
+}
+
+.main-nav {
+  margin-left: auto;
+}
+
 .main-nav > ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
   gap: clamp(12px, 2.2vw, 32px);
 }
@@ -1050,6 +1059,500 @@ a.project-tile:hover {
   margin-top: 32px;
 }
 
+.galah-page {
+  --galah-ink: #171319;
+  --galah-pink: #c2185b;
+  padding: clamp(36px, 6vw, 72px) clamp(16px, 5vw, 64px);
+  background: #e8e8ed;
+  color: #292936;
+  text-align: left;
+}
+
+.galah-page .galah-explorer-toolbar,
+.galah-page .explorer-toolbar-icon,
+.galah-page .explorer-breadcrumb strong,
+.galah-page .explorer-sidebar-heading,
+.galah-page .explorer-folder-link,
+.galah-page .explorer-location,
+.galah-page .galah-folder-heading h1,
+.galah-page .explorer-folder-meta,
+.galah-page .project-overview h2,
+.galah-page .project-stats h2,
+.galah-page .project-awards h2,
+.galah-page .project-overview-box,
+.galah-page .project-overview-box strong,
+.galah-page .metric-label,
+.galah-page .metric-value,
+.galah-page .award-list li,
+.galah-page > .project-detail-content > .btn-light {
+  color: var(--galah-ink);
+}
+
+.galah-page .explorer-breadcrumb span,
+.galah-page .explorer-folder-meta span,
+.galah-page .award-list li strong,
+.galah-page > .project-detail-content > .btn-light:hover {
+  color: var(--galah-pink);
+}
+
+.galah-page .project-detail-content {
+  max-width: 1120px;
+}
+
+.galah-explorer {
+  overflow: hidden;
+  border: 1px solid #c7c7d0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(37, 37, 50, 0.16);
+}
+
+.galah-explorer-toolbar {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  gap: 14px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5ea;
+  color: #747482;
+  font-size: 0.85rem;
+}
+
+.explorer-toolbar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #454553;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.explorer-toolbar-icon:hover,
+.galah-page .explorer-toolbar-icon:hover {
+  background: #f0e8ed;
+  color: #c2185b;
+}
+
+.explorer-toolbar-icon:focus-visible,
+.galah-page .explorer-toolbar-icon:focus-visible {
+  outline: 2px solid #c2185b;
+  outline-offset: 2px;
+}
+
+.explorer-breadcrumb {
+  margin-left: 6px;
+}
+
+.explorer-breadcrumb span {
+  padding: 0 8px;
+  color: #b6b6c0;
+}
+
+.explorer-breadcrumb strong {
+  color: #30303d;
+}
+
+.explorer-item-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+.galah-explorer-workspace {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  min-height: 600px;
+}
+
+.galah-explorer-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 14px;
+  border-right: 1px solid #e5e5ea;
+  background: #fafafd;
+}
+
+.explorer-sidebar-heading {
+  padding: 0 10px 8px;
+  color: #888895;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.explorer-folder-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: #444451;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.explorer-folder-link:hover,
+.explorer-folder-link:focus-visible {
+  background: #f0e8ed;
+}
+
+.explorer-folder-link:focus-visible {
+  outline: 2px solid #e64626;
+  outline-offset: 2px;
+}
+
+.explorer-folder-link img {
+  width: 25px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.galah-explorer-main {
+  min-width: 0;
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.galah-folder-heading {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.galah-folder-icon {
+  flex: 0 0 76px;
+  width: 76px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.explorer-location {
+  margin-bottom: 4px;
+  color: #8b8b98;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.galah-page .galah-folder-heading h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.explorer-folder-meta {
+  margin-top: 8px;
+  color: #777784;
+  font-size: 0.82rem;
+}
+
+.explorer-folder-meta span {
+  padding: 0 5px;
+  color: #e64626;
+}
+
+.galah-page .project-content-layout {
+  align-items: flex-start;
+  gap: clamp(24px, 3vw, 36px);
+  margin-top: 0;
+}
+
+.galah-page section {
+  padding: 0;
+}
+
+.galah-page .project-overview {
+  margin-top: 28px;
+}
+
+.galah-page .project-overview h2,
+.galah-page .project-stats h2,
+.galah-page .project-awards h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.galah-page .project-overview-box {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.galah-page .project-stats,
+.galah-page .project-awards {
+  margin-top: 28px;
+}
+
+.galah-page .metric-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.galah-page .metric-card {
+  padding: 14px;
+  border: 1px solid #e6e2e8;
+  border-radius: 7px;
+  background: #fbf8fb;
+}
+
+.galah-page .metric-label {
+  margin-bottom: 6px;
+  font-size: 0.65rem;
+}
+
+.galah-page .metric-value {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.galah-page .award-list {
+  gap: 8px;
+}
+
+.galah-page .award-list li {
+  padding: 12px 14px;
+  border: 1px solid #eee5e9;
+  border-radius: 7px;
+  background: #fff8fb;
+  font-size: 0.84rem;
+}
+
+.galah-page .award-list li strong {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.galah-rocket-card {
+  flex: 0 0 270px;
+  align-self: flex-start;
+  margin-top: 28px;
+  padding: 14px;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  background: #f7f7f9;
+}
+
+.galah-page .galah-rocket-image {
+  width: 100%;
+  max-height: 510px;
+  object-fit: contain;
+}
+
+.galah-rocket-card figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e2e8;
+  color: var(--galah-ink);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.galah-page > .project-detail-content > .btn-light {
+  border-color: var(--galah-ink);
+}
+
+.galah-page > .project-detail-content > .btn-light:hover {
+  border-color: var(--galah-pink);
+}
+
+.projects-directory-page {
+  min-height: 70vh;
+  padding: 0;
+  background: #f1f1f1;
+  color: var(--color-dark);
+}
+
+.projects-explorer-section {
+  min-height: 70vh;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-explorer {
+  max-width: none;
+  min-height: 70vh;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.projects-explorer .galah-explorer-workspace {
+  min-height: calc(70vh - 52px);
+}
+
+.projects-explorer-workspace {
+  grid-template-columns: 210px minmax(0, 1fr);
+}
+
+.projects-explorer .galah-explorer-toolbar {
+  border-bottom-color: #343434;
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.projects-explorer .explorer-toolbar-icon,
+.projects-explorer .explorer-breadcrumb strong,
+.projects-explorer .explorer-item-count {
+  color: var(--color-light);
+}
+
+.projects-explorer .explorer-toolbar-icon:hover {
+  background: rgba(241, 241, 241, 0.14);
+  color: #ff4081;
+}
+
+.projects-explorer .explorer-toolbar-icon:focus-visible {
+  outline-color: #ff4081;
+}
+
+.projects-explorer .explorer-breadcrumb span {
+  color: #bdbdc3;
+}
+
+.projects-explorer-sidebar {
+  gap: 7px;
+  border-right-color: #e5e5ea;
+  background: #fff;
+}
+
+.projects-explorer-sidebar .explorer-sidebar-heading {
+  color: #777784;
+}
+
+.projects-sidebar-subheading {
+  margin-top: 20px;
+}
+
+.projects-explorer-sidebar .explorer-folder-link {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.8rem;
+}
+
+.projects-explorer-sidebar .explorer-folder-link.is-current {
+  background: #f0e8ed;
+  color: #30303d;
+}
+
+.projects-explorer-sidebar .explorer-folder-link:hover,
+.projects-explorer-sidebar .explorer-folder-link:focus-visible {
+  background: #f8f1f5;
+  color: #30303d;
+}
+
+.projects-explorer-sidebar .explorer-folder-link:focus-visible {
+  outline-color: #ff4081;
+}
+
+.projects-explorer-main {
+  padding: clamp(22px, 3.5vw, 38px);
+}
+
+.projects-directory-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.projects-directory-heading h1 {
+  color: #292936;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.projects-file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+  gap: 16px;
+  padding-top: 26px;
+}
+
+.project-file {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  background: #fff;
+  color: #343440;
+  box-shadow: 0 2px 8px rgba(37, 37, 50, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-file:hover {
+  transform: translateY(-3px);
+  border-color: #d5b6c5;
+  box-shadow: 0 8px 18px rgba(37, 37, 50, 0.1);
+}
+
+.project-file:focus-visible {
+  outline: 3px solid #e64626;
+  outline-offset: 3px;
+}
+
+.project-file-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #8b8b98;
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.project-file-top img {
+  width: 25px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.project-file-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 122px;
+  padding: 10px;
+  border: 1px solid #eeeef1;
+  border-radius: 5px;
+  background: #f8f8fa;
+}
+
+.project-file-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-file-name {
+  display: block;
+  overflow: hidden;
+  margin-top: 11px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ===================== SPONSORS ===================== */
 .sponsors {
   text-align: center;
@@ -1261,8 +1764,26 @@ a.project-tile:hover {
   .main-nav > ul {
     gap: 12px 18px;
   }
+  .galah-explorer-workspace {
+    grid-template-columns: 155px minmax(0, 1fr);
+  }
+  .projects-explorer-workspace {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+  .galah-explorer-sidebar {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   .project-content-layout {
     flex-direction: column;
+  }
+  .galah-page .project-content-layout {
+    flex-direction: column;
+  }
+  .galah-rocket-card {
+    flex-basis: auto;
+    width: min(100%, 320px);
+    align-self: center;
   }
   .galah-rocket-image {
     flex-basis: auto;
@@ -1274,6 +1795,79 @@ a.project-tile:hover {
 }
 
 @media (max-width: 600px) {
+  .galah-explorer-toolbar {
+    min-height: 46px;
+    gap: 9px;
+    padding: 0 14px;
+  }
+  .explorer-item-count {
+    font-size: 0.65rem;
+  }
+  .galah-explorer-workspace {
+    grid-template-columns: 1fr;
+  }
+  .projects-explorer-workspace {
+    grid-template-columns: 1fr;
+  }
+  .galah-explorer-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 12px;
+    border-right: 0;
+    border-bottom: 1px solid #e5e5ea;
+  }
+  .explorer-sidebar-heading {
+    display: none;
+  }
+  .explorer-folder-link {
+    gap: 6px;
+    padding: 7px;
+    font-size: 0.72rem;
+  }
+  .explorer-folder-link img {
+    width: 20px;
+    height: 17px;
+  }
+  .projects-explorer-sidebar .explorer-folder-link {
+    padding: 7px;
+    font-size: 0.72rem;
+  }
+  .galah-explorer-main {
+    padding: 22px 18px;
+  }
+  .projects-explorer-main {
+    padding: 22px 18px;
+  }
+  .projects-file-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 20px;
+  }
+  .project-file {
+    padding: 9px;
+  }
+  .project-file-preview {
+    height: 100px;
+  }
+  .project-file-name {
+    font-size: 0.78rem;
+  }
+  .galah-folder-heading {
+    gap: 14px;
+    padding-bottom: 20px;
+  }
+  .galah-folder-icon {
+    flex-basis: 56px;
+    width: 56px;
+    height: 48px;
+  }
+  .explorer-folder-meta {
+    font-size: 0.72rem;
+  }
+  .galah-page .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .about-intro {
     align-items: flex-start;
     flex-direction: column;
@@ -1283,16 +1877,19 @@ a.project-tile:hover {
     align-self: flex-end;
   }
   .nav-wrap {
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 5%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 12px;
   }
   .main-nav > ul {
-    justify-content: center;
-    gap: 6px 12px;
+    justify-content: flex-end;
+    gap: 4px 8px;
   }
   .main-nav a {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
+  }
+  .logo img {
+    height: 32px;
   }
   .dropdown {
     left: 50%;
