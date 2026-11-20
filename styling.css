@@ -1416,8 +1416,10 @@ a.project-tile:hover {
 .projects-directory-page {
   min-height: 70vh;
   padding: 0;
-  background: #f1f1f1;
-  color: var(--color-dark);
+  background:
+    linear-gradient(rgba(20, 20, 20, 0.78), rgba(20, 20, 20, 0.78)),
+    url("images/media/cool-rocket-img.JPG") center / cover no-repeat;
+  color: var(--color-light);
 }
 
 .projects-explorer-section {
@@ -1434,14 +1436,19 @@ a.project-tile:hover {
   border: 0;
   border-radius: 0;
   box-shadow: none;
+  background: transparent;
 }
 
 .projects-explorer .galah-explorer-workspace {
-  min-height: calc(70vh - 52px);
+  min-height: 70vh;
 }
 
 .projects-explorer-workspace {
-  grid-template-columns: 210px minmax(0, 1fr);
+  display: block;
+}
+
+.projects-explorer .galah-explorer-toolbar {
+  display: none;
 }
 
 .projects-explorer .galah-explorer-toolbar {
@@ -1470,9 +1477,7 @@ a.project-tile:hover {
 }
 
 .projects-explorer-sidebar {
-  gap: 7px;
-  border-right-color: #e5e5ea;
-  background: #fff;
+  display: none;
 }
 
 .projects-explorer-sidebar .explorer-sidebar-heading {
@@ -1505,45 +1510,54 @@ a.project-tile:hover {
 }
 
 .projects-explorer-main {
-  padding: clamp(22px, 3.5vw, 38px);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 88px) clamp(20px, 6vw, 72px);
 }
 
 .projects-directory-heading {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e5e5ea;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(241, 241, 241, 0.24);
 }
 
 .projects-directory-heading h1 {
-  color: #292936;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-light);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.projects-directory-heading .explorer-location,
+.projects-directory-heading .explorer-folder-meta {
+  color: var(--color-light);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .projects-file-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
-  gap: 16px;
-  padding-top: 26px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 24px);
+  padding-top: 32px;
 }
 
 .project-file {
   min-width: 0;
-  padding: 13px;
-  border: 1px solid #e5e5ea;
-  border-radius: 8px;
-  background: #fff;
-  color: #343440;
-  box-shadow: 0 2px 8px rgba(37, 37, 50, 0.04);
+  padding: 16px;
+  border: 1px solid rgba(241, 241, 241, 0.14);
+  border-radius: 4px;
+  background: rgba(20, 20, 20, 0.72);
+  color: var(--color-light);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .project-file:hover {
-  transform: translateY(-3px);
-  border-color: #d5b6c5;
-  box-shadow: 0 8px 18px rgba(37, 37, 50, 0.1);
+  transform: translateY(-4px);
+  border-color: #e64626;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .project-file:focus-visible {
@@ -1555,8 +1569,8 @@ a.project-tile:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
-  color: #8b8b98;
+  margin-bottom: 12px;
+  color: var(--color-light);
   font-size: 0.59rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1572,11 +1586,10 @@ a.project-tile:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 122px;
-  padding: 10px;
-  border: 1px solid #eeeef1;
-  border-radius: 5px;
-  background: #f8f8fa;
+  height: 150px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .project-file-preview img {
@@ -1885,6 +1898,7 @@ a.project-tile:hover {
   }
   .project-file-preview {
     height: 100px;
+    border: 0;
   }
   .project-file-name {
     font-size: 0.78rem;
