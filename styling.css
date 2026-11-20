@@ -635,35 +635,49 @@ section {
 }
 
 /* ===================== TEAM ===================== */
-.team-intro {
-  background: var(--color-dark);
+.team-page main {
   color: var(--color-light);
-  padding: clamp(56px, 10vw, 112px) clamp(20px, 8vw, 8%);
-  text-align: center;
+  background:
+    linear-gradient(rgba(20, 20, 20, 0.78), rgba(20, 20, 20, 0.78)),
+    url("images/media/cool-rocket-img.JPG") center / cover fixed no-repeat;
+}
+
+.team-intro {
+  display: flex;
+  min-height: 42vh;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  color: var(--color-light);
+  text-align: left;
 }
 
 .team-intro h1 {
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.1;
   margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 
 .team-intro p {
   max-width: 640px;
-  margin: 0 auto;
-  color: rgba(241, 241, 241, 0.8);
+  color: rgba(241, 241, 241, 0.86);
   font-size: 1.05rem;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .executive-team {
-  background: var(--color-light);
-  padding: clamp(40px, 7vw, 72px) clamp(20px, 8vw, 8%);
+  background: transparent;
+  color: var(--color-light);
   text-align: center;
 }
 
-.executive-team h2 {
+.executive-team h2,
+.team-carousel h2 {
   font-size: clamp(1.7rem, 4vw, 2.4rem);
   margin-bottom: 28px;
+  color: var(--color-light);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 
 .leadership-grid {
@@ -676,9 +690,10 @@ section {
 
 .leadership-card {
   overflow: hidden;
-  background: #fff;
+  border: 1px solid rgba(241, 241, 241, 0.14);
   border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: rgba(20, 20, 20, 0.78);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .leadership-photo {
@@ -703,23 +718,21 @@ section {
 .leadership-info h3 {
   font-size: 1.1rem;
   margin-bottom: 6px;
+  color: var(--color-light);
 }
 
-.leadership-info p {
+.leadership-info p,
+.member-role {
   color: #e64626;
   font-size: 0.85rem;
   font-weight: 700;
 }
 
 .team-carousel {
-  background: var(--color-light);
   min-height: 60vh;
+  background: transparent;
+  color: var(--color-light);
   text-align: center;
-}
-
-.team-carousel h2 {
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  margin-bottom: 28px;
 }
 
 .team-picker {
@@ -730,31 +743,32 @@ section {
   margin: 0 auto 36px;
 }
 
-.team-picker button,
-.carousel-control {
-  border: 1px solid var(--color-dark);
-  background: transparent;
-  color: var(--color-dark);
+.team-page .team-picker button,
+.team-page .carousel-control {
+  border: 1px solid rgba(241, 241, 241, 0.72);
+  background: rgba(20, 20, 20, 0.45);
+  color: var(--color-light);
   cursor: pointer;
   font: inherit;
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.team-picker button {
+.team-page .team-picker button {
   border-radius: 2px;
   padding: 10px 16px;
 }
 
-.team-picker button[aria-selected="true"],
-.team-picker button:hover,
-.carousel-control:hover {
-  background: var(--color-dark);
+.team-page .team-picker button[aria-selected="true"],
+.team-page .team-picker button:hover,
+.team-page .carousel-control:hover {
+  border-color: #e64626;
+  background: #e64626;
   color: var(--color-light);
 }
 
-.team-picker button:focus-visible,
-.carousel-control:focus-visible {
+.team-page .team-picker button:focus-visible,
+.team-page .carousel-control:focus-visible {
   outline: 3px solid #e64626;
   outline-offset: 3px;
 }
@@ -766,11 +780,12 @@ section {
 .team-slide h3 {
   margin-bottom: 8px;
   font-size: 1.5rem;
+  color: var(--color-light);
 }
 
 .team-slide > p {
   margin-bottom: 28px;
-  color: #666;
+  color: rgba(241, 241, 241, 0.82);
 }
 
 .member-grid {
@@ -784,16 +799,17 @@ section {
 
 .member-card {
   overflow: hidden;
-  background: #fff;
+  border: 1px solid rgba(241, 241, 241, 0.14);
   border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: rgba(20, 20, 20, 0.78);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .member-avatar {
   display: grid;
   min-height: 190px;
   place-items: center;
-  background: var(--color-dark);
+  background: rgba(241, 241, 241, 0.08);
   color: var(--color-light);
   font-size: 2.5rem;
   font-weight: 700;
@@ -807,19 +823,17 @@ section {
 .member-info h4 {
   margin-bottom: 4px;
   font-size: 1.1rem;
+  color: var(--color-light);
 }
 
 .member-role {
   margin-bottom: 10px;
-  color: #e64626;
-  font-size: 0.8rem;
-  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .member-bio {
-  color: #666;
+  color: rgba(241, 241, 241, 0.82);
   font-size: 0.9rem;
 }
 
