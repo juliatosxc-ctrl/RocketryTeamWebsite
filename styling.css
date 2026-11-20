@@ -11,14 +11,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: var(--color-dark);
   line-height: 1.6;
-}
-
-.home-page.is-locked {
-  overflow: hidden;
 }
 
 a {
@@ -157,6 +157,20 @@ section {
   gap: clamp(24px, 5vw, 40px);
   min-height: 100vh;
   padding: clamp(48px, 8vh, 88px) clamp(20px, 8vw, 8%);
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 0.78));
+  pointer-events: none;
 }
 
 .hero-content {
@@ -431,6 +445,9 @@ section {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+  position: relative;
+  scroll-margin-top: 0;
+  box-shadow: inset 0 100px 140px rgba(20, 20, 20, 0.34);
 }
 
 .about-intro {
@@ -470,7 +487,7 @@ section {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-areas:
     "team vision"
-    "rockets sponsors";
+    "projects partners";
   grid-template-rows: repeat(2, minmax(0, 1fr));
   align-content: space-between;
   gap: clamp(18px, 3vw, 30px);
@@ -487,11 +504,11 @@ section {
 }
 
 .about-item:nth-child(3) {
-  grid-area: rockets;
+  grid-area: projects;
 }
 
 .about-item:nth-child(4) {
-  grid-area: sponsors;
+  grid-area: partners;
 }
 
 .about-item {
@@ -499,6 +516,22 @@ section {
   padding: 20px;
   border-radius: 4px;
   background: rgba(20, 20, 20, 0.72);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.about-item:hover,
+.about-item:focus-visible {
+  animation: about-card-jiggle 0.38s ease-in-out;
+}
+
+@keyframes about-card-jiggle {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  25% { transform: translateX(-4px) rotate(-1deg); }
+  50% { transform: translateX(4px) rotate(1deg); }
+  75% { transform: translateX(-2px) rotate(-0.5deg); }
 }
 
 .about-grid.is-staggered .about-item {
@@ -553,10 +586,19 @@ section {
     animation: none;
   }
 
+  html {
+    scroll-behavior: auto;
+  }
+
   .about-grid.is-staggered .about-item {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .about-item:hover,
+  .about-item:focus-visible {
+    animation: none;
   }
 }
 

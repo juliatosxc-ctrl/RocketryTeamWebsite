@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="images/team%20logos/urt-favicon.png">
 <link rel="stylesheet" href="styling.css">
 </head>
-<body class="home-page is-locked">
+<body class="home-page">
 
 <!-- ===================== HEADER / NAV ===================== -->
 <header class="site-header">
@@ -61,26 +61,25 @@
       <h2>About Us</h2>
       <p class="about-lead">At University Rocketry Team, we design, manufacture, and launch high-power sounding rockets to a world-class standard.</p>
     </div>
-    <a href="#projects" class="btn about-projects-btn">Our Projects</a>
   </div>
 
   <div class="about-grid">
-    <div class="about-item">
+    <a class="about-item" href="team.html">
       <h5>The Team</h5>
       <p>We are a highly technical team of student engineers who design, manufacture and test high-power sounding rockets to compete in domestic and international competitions.</p>
-    </div>
-    <div class="about-item">
+    </a>
+    <a class="about-item" href="team.html">
       <h5>Our Vision</h5>
       <p>Our passionate team strives to innovate and push the boundaries of the sounding rocket environment every day, and we hope to inspire the next generation of student engineers.</p>
-    </div>
-    <div class="about-item">
-      <h5>Our Rockets</h5>
-      <p>Our rockets are designed for performance and built with integrity. We take a systems engineering approach, ensuring meticulous crafting and rigorous testing.</p>
-    </div>
-    <div class="about-item">
-      <h5>Our Sponsors</h5>
-      <p>We would not have been able to achieve our major milestones without the generous support of our sponsors, making all our rocketry projects possible.</p>
-    </div>
+    </a>
+    <a class="about-item" href="projects.html">
+      <h5>Our Projects</h5>
+      <p>Our projects are designed for performance and built with integrity. We take a systems engineering approach, ensuring meticulous crafting and rigorous testing.</p>
+    </a>
+    <a class="about-item" href="partners.html">
+      <h5>Our Partners</h5>
+      <p>We would not have been able to achieve our major milestones without the generous support of our partners, making all our rocketry projects possible.</p>
+    </a>
   </div>
 </section>
 
@@ -302,8 +301,9 @@
     }
   }
 
-  learnMoreLink.addEventListener('click', () => {
-    document.body.classList.remove('is-locked');
+  learnMoreLink.addEventListener('click', event => {
+    event.preventDefault();
+    document.querySelector('#team')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     siteHeader.classList.remove('is-visible');
     siteHeader.classList.add('is-dismissed');
   });
